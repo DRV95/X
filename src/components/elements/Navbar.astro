@@ -4,57 +4,57 @@ import Container from "../shared/Container.astro";
 import Navitem from "../shared/Navitem.astro";
 
 const navItems = [
-    {
-        href:"/",
-        text:"Inicio"
-    },
-    {
-        href:"/#services",
-        text:"Servicios"
-    },
-    {
-        href:"/#about-us",
-        text:"Nosotros"
-    },
-    {
-        href:"/#features",
-        text:"Proceso"
-    },
-    {
-        href:"/#Contacto",
-        text:"Contactar"
-    },
-    ];
+    {
+        href:"/",
+        text:"Inicio"
+    },
+    {
+        href:"/#services",
+        text:"Servicios"
+    },
+    {
+        href:"/#about-us",
+        text:"Nosotros"
+    },
+    {
+        href:"/#features",
+        text:"Proceso"
+    },
+    {
+        href:"/#Contacto",
+        text:"Contactar"
+    },
+];
 ---
 
 <header class="absolute inset-x-0 top-0 z-50 py-6">
-    <Container>
-        <nav class="w-full flex justify-between gap-6 relative">
-             <div class="min-w-max inline-flex relative">
-                <a href="/" class="relative flex items-center gap-3">
-                    <img 
-                        src="/images/logo.png" 
-                        alt="Logo Elimine sus Deudas" 
-                        class="w-13 h-13 object-contain" 
-                        width="35" 
-                        height="35"
-                    />
-                    <div class="inline-flex text-lg font-semibold text-heading-1">
-                        Elimine sus Deudas
-                    </div>
-                </a>
-            </div>
+    <Container>
+        <nav class="w-full flex justify-between gap-6 relative">
+             <div class="min-w-max inline-flex relative">
+                <a href="/" class="relative flex items-center gap-3">
+                    <img 
+                        src="/images/logo.png" 
+                        alt="Logo Elimine sus Deudas" 
+                        class="w-13 h-13 object-contain" 
+                        width="35" 
+                        height="35"
+                    />
+                    <div class="inline-flex text-lg font-semibold text-heading-1">
+                        Elimine sus Deudas
+                    </div>
+                </a>
+            </div>
 
-            <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
-            <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
-                <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
-                    {navItems.map(item=>{
-                        return <Navitem {...item}/>
-                    })
-                    }
-                </ul>
+            <div data-nav-overlay aria-hidden="true" class="fixed hidden inset-0 lg:!hidden bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl"></div>
+            <div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
+                <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
+                    {navItems.map(item=>{
+                        return <Navitem {...item}/>
+                    })
+                    }
+                </ul>
 
-                <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+                <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
                     <button
                         type="button"
                         onclick="document.getElementById('modal-formulario-contacto').classList.remove('hidden')"
@@ -64,31 +64,31 @@ const navItems = [
                             Formulario
                         </span>
                     </button>
-                </div>
-            </div>
+                </div>
+            </div>
 
 
-            <div class="min-w-max flex items-center gap-x-3">
-                <button data-switch-theme class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:flex hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                      </svg>
-                                    
-                    <span class="sr-only">cambiar tema</span>
-                </button>
-                
-                <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
-                    <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
-                    <span id="line2" class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span> 
-                    <span id="line3" class="w-6 mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span>                         
-                    <span class="sr-only">togglenav</span>
-                </button>
-            </div>
-        </nav>
-    </Container>
+            <div class="min-w-max flex items-center gap-x-3">
+                <button data-switch-theme class="outline-none flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:flex hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                      </svg>
+                                        
+                    <span class="sr-only">cambiar tema</span>
+                </button>
+                
+                <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
+                    <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                    <span id="line2" class="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span> 
+                    <span id="line3" class="w-6 mt-1 h-0.5 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"></span>                         
+                    <span class="sr-only">togglenav</span>
+                </button>
+            </div>
+        </nav>
+    </Container>
 
     <div 
         id="modal-formulario-contacto" 
@@ -96,55 +96,124 @@ const navItems = [
         role="dialog" 
         aria-modal="true"
     >
-      
-      <div 
-        class="absolute inset-0 backdrop-blur-sm"
-        onclick="document.getElementById('modal-formulario-contacto').classList.add('hidden')"
-        aria-hidden="true"
-        style="background-image: url('/images/texture.svg'); background-size: cover; background-color: rgba(0, 0, 0, 0.7);"
-      ></div>
-
-      <div class="relative bg-white dark:bg-box-bg rounded-xl shadow-2xl max-w-lg mx-auto my-12 overflow-y-auto max-h-[90%] p-6 transform transition-all">
-        
-        <div class="flex justify-between items-center pb-4 border-b border-box-border rounded-t-xl p-6 -m-6 mb-0 bg-white dark:bg-box-bg">
-          <h3 class="text-2xl font-bold text-heading-1">¡Agenda tu Asesoría Gratuita!</h3>
-          <button 
-            type="button" 
-            class="text-heading-2 hover:text-red-500 transition duration-150"
+        <div 
+            class="absolute inset-0 backdrop-blur-sm"
             onclick="document.getElementById('modal-formulario-contacto').classList.add('hidden')"
-            aria-label="Cerrar modal"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          </button>
-        </div>
+            aria-hidden="true"
+            style="background-image: url('/images/texture.svg'); background-size: cover; background-color: rgba(0, 0, 0, 0.7);"
+        ></div>
 
-        <form class="mt-5 space-y-5 rounded-b-xl p-6 -m-6 mt-0 bg-white dark:bg-box-bg">
-          
-          <div>
-            <label for="nombre" class="block text-sm font-medium text-heading-2">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" class="mt-1 block w-full border border-box-border rounded-lg shadow-sm p-3 bg-body focus:ring-primary focus:border-primary text-heading-2" placeholder="Tu nombre" required>
-          </div>
-          
-          <div>
-            <label for="telefono" class="block text-sm font-medium text-heading-2">Teléfono / WhatsApp</label>
-            <input type="tel" id="telefono" name="telefono" class="mt-1 block w-full border border-box-border rounded-lg shadow-sm p-3 bg-body focus:ring-primary focus:border-primary text-heading-2" placeholder="+56 9 XXXX XXXX" required>
-          </div>
-          
-          <div>
-            <label for="comentario" class="block text-sm font-medium text-heading-2">Breve Comentario</label>
-            <textarea id="comentario" name="comentario" rows="3" class="mt-1 block w-full border border-box-border rounded-lg shadow-sm p-3 bg-body focus:ring-primary focus:border-primary text-heading-2" placeholder="¿Cómo te podemos ayudar?" required></textarea>
-          </div>
-          
-          <div class="pt-2">
-            <button type="submit" class="w-full relative flex justify-center items-center h-11 px-8 rounded-lg bg-primary hover:bg-primary-dark transition duration-300 ease-in-out text-white font-semibold shadow-lg">
-                <span class="relative z-10">
-                    Enviar y Agendar
-                </span>
-            </button>
-          </div>
-          
-        </form>
+        <div class="relative bg-white dark:bg-box-bg rounded-xl shadow-2xl max-w-lg mx-auto my-12 overflow-y-auto max-h-[90%] p-6 transform transition-all">
+            
+            <div class="flex justify-between items-center pb-4 border-b border-box-border rounded-t-xl p-6 -m-6 mb-0 bg-white dark:bg-box-bg">
+                <h3 class="text-2xl font-bold text-heading-1">¡Agenda tu Asesoría Gratuita!</h3>
+                <button 
+                    type="button" 
+                    class="text-heading-2 hover:text-red-500 transition duration-150"
+                    onclick="document.getElementById('modal-formulario-contacto').classList.add('hidden')"
+                    aria-label="Cerrar modal"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <form id="formulario-deuda" action="https://eliminesusdeudas.cl/agendarevaluacion" method="post" class="mt-5 space-y-5 rounded-b-xl p-6 -m-6 mt-0 bg-white dark:bg-box-bg">
         
-      </div>
+                <div>
+                    <label for="monto-deuda" class="block text-sm font-medium text-gray-900 dark:text-heading-2">¿Cuál es el monto total de su deuda?</label>
+                    <select 
+                        id="monto-deuda" 
+                        name="monto-deuda"
+                        class="mt-1 block w-full border border-box-border rounded-lg shadow-sm p-3 bg-body focus:ring-primary focus:border-primary text-gray-900 dark:text-heading-2" 
+                        required
+                        onchange="aplicarLogicaDeuda()"
+                    >
+                        <option value="">Seleccione una opción</option>
+                        <option value="bajo">Menos de $3.000.000</option>
+                        <option value="medio">Entre $3.000.000 y $5.000.000</option>
+                        <option value="alto">Entre $5.000.000 y $10.000.000</option>
+                        <option value="muy_alto">Más de $10.000.000</option>
+                    </select>
+                </div>
+                
+                <div id="advertencia" class="p-4 text-sm text-red-700 bg-red-100 border border-red-400 rounded-lg dark:bg-red-900 dark:text-red-300" role="alert" style="display: none;">
+                    <strong class="font-semibold">¡Atención!</strong> Su monto no se Ajusta a la Ley de Insolvencia. El requisito de deuda mínima total es 80 UF.
+                </div>
+
+                <div id="campos-contacto" class="space-y-5">
+                    
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-900 dark:text-heading-2">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="mt-1 block w-full border border-box-border rounded-lg shadow-sm p-3 bg-body focus:ring-primary focus:border-primary text-gray-900 dark:text-heading-2" placeholder="Tu nombre" required>
+                    </div>
+                    
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" id="btn-enviar" class="w-full relative flex justify-center items-center h-11 px-8 rounded-lg bg-primary hover:bg-primary-dark transition duration-300 ease-in-out text-white font-semibold shadow-lg">
+                        <span id="btn-texto" class="relative z-10">
+                            Enviar y Agendar
+                        </span>
+                    </button>
+                </div>
+                
+            </form>
+            </div>
     </div>
+    <script is:inline>
+        function aplicarLogicaDeuda() {
+            const montoDeuda = document.getElementById('monto-deuda').value;
+            const advertencia = document.getElementById('advertencia');
+            const btnEnviar = document.getElementById('btn-enviar');
+            const btnTexto = document.getElementById('btn-texto');
+            
+            let isApto = true;
+            let btnMessage = 'Enviar y Agendar';
+
+            if (montoDeuda === 'bajo') {
+                // Caso 1: Monto no apto (Menos de $3.000.000)
+                isApto = false;
+                btnMessage = 'Monto no apto para la ley';
+                advertencia.style.display = 'block';
+
+            } else if (montoDeuda === '') {
+                // Caso 2: No se ha seleccionado nada (Estado inicial)
+                isApto = false;
+                btnMessage = 'Enviar y Agendar';
+                advertencia.style.display = 'none';
+            
+            } else {
+                // Caso 3: Monto apto (medio, alto, muy_alto)
+                isApto = true;
+                btnMessage = 'Enviar y Agendar';
+                advertencia.style.display = 'none';
+            }
+
+            // Aplicar estado
+            btnEnviar.disabled = !isApto;
+            btnTexto.textContent = btnMessage;
+
+            if (btnEnviar.disabled) {
+                btnEnviar.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                btnEnviar.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // 1. Ejecución inicial al cargar la página
+        document.addEventListener('DOMContentLoaded', aplicarLogicaDeuda);
+        
+        // 2. Ejecución cada vez que el modal se abre (porque el usuario no interactúa hasta que se abre)
+        const modal = document.getElementById('modal-formulario-contacto');
+        if (modal) {
+            new MutationObserver((mutationsList) => {
+                for (const mutation of mutationsList) {
+                    // Si la clase 'hidden' es removida, el modal se acaba de abrir.
+                    if (mutation.attributeName === 'class' && !modal.classList.contains('hidden')) {
+                        aplicarLogicaDeuda();
+                    }
+                }
+            }).observe(modal, { attributes: true });
+        }
+    </script>
 </header>
