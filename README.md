@@ -1,14 +1,14 @@
-<h1>AgenceX Landing page</h1>
+<h1>AgenceX BASED Landing page</h1>
 
-A simple landing page for a digital agency
+A simple landing page for a Lawyer agency
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+
 
 
 ## Tools
 - TailwindCSS v4
 - AstroJs v5
+  
 
 
 ## 🚀 Project Structure
