@@ -1,0 +1,124 @@
+---
+import Button from "../shared/Button.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+ <section id="Nosotros" class="py-0 md:py-0">
+    <Container className="flex flex-col midmd:flex-row gap-5 lg:gap-5">
+        <div class="text-center flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col mx-auto">
+            <Title>
+                Nosotros
+            </Title>
+        </div>
+    </Container>
+
+    <Container className="flex justify-center gap-4 mt-4 mb-4 flex-wrap">
+        <a
+            href="#Historia"
+            class="min-w-max text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 py-3 px-6 rounded-full inline-flex items-center justify-center font-bold shadow-lg"
+        >
+            <span class="relative z-[5]">
+                Historia
+            </span>
+        </a>
+
+        <a
+            href="#Mision"
+            class="min-w-max text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 py-3 px-6 rounded-full inline-flex items-center justify-center font-bold shadow-lg"
+        >
+            <span class="relative z-[5]">
+                Misión
+            </span>
+        </a>
+        <a
+            href="#Vision"
+            class="min-w-max text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 py-3 px-6 rounded-full inline-flex items-center justify-center font-bold shadow-lg"
+        >
+            <span class="relative z-[5]">
+                Visión
+            </span>
+        </a>
+    </Container>
+</section>
+<section id="Historia" class="pb-10" style="scroll-margin-top: 100px;">
+  
+    <Container>
+        <div
+          class="w-full relative py-5 md:py-7 px-6 md:px-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent max-w-xl mx-auto"
+        >
+            <div class="mx-auto text-center relative">
+                <h1
+                  class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-heading-1"
+                >
+                  Nuestra <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">Historia</span> 
+                </h1>
+                <Paragraph className={"pt-10 text-left"}>
+                  Nuestro estudio jurídico se funda el año 2011 con el firme propósito de hacer las cosas bien, marcar una diferencia y sobresalir del resto de estudios de abogados, otorgando un servicio rápido, transparente y con precios accesibles.
+                El estudio fue abarcando materias de diversa índole, hasta comenzar el año 2016 a orientarse en temas del ámbito concursal, etapa que comienza con los estudios de especialización del socio fundador en materias de la insolvencia económica.
+                Desde sus inicios el estudio se enfocó territorialmente a la región del Bio bio, sin embargo el año 2020, con el inicio de la pandemia, el estudio expandió su cobertura a nivel nacional, lo que fue posible gracias a que todos los procesos y reuniones se comenzaron a realizar en forma remota, modalidad que se mantiene hasta el día de hoy.
+                El esfuerzo y dedicación constante rindieron sus efectos, y con gran orgullo podemos decir que el año 2022 alcanzamos los 1000 casos gestionados por el estudio, y el 2025 superamos los 3000 casos entre liquidaciones tramitadas en tribunales y renegociaciones tramitadas ante la Superintendencia de Insolvencia, lo que demuestra que nuestro crecimiento va en aumento.
+                Al igual que en sus inicios, el socio fundador supervisa y se preocupa que cada caso sea atendido con la seriedad y profesionalismo que se espera para alcanzar la satisfacción de nuestros clientes.
+                Buscamos como estudio dar todas las opciones que la ley contempla, y recomendar la opción que mas le convenga al cliente en virtud de su situación particular.
+                dentro de las opciones que solemos ofrecer están:
+                Herramientas de la ley 20.720 tales como la renegociación administrativa de todos los créditos ante la Superintendencia de Insolvencia y Re emprendimiento, la liquidación voluntaria de bienes (quiebra), la reorganización de empresas, entre otras.
+                La prescripción es otra de las herramientas que utilizamos para eliminar aquellas deudas antiguas que cumplan con los requisitos legales, permitiendo eliminar para siempre una deuda determinada.
+                El abandono del procedimiento en juicios que se encuentran paralizados, es otra forma de eliminar un juicio pendiente donde estén cobrando un crédito. Al declararse abandonado, se tiene como que si nunca se hubiese demandado, perdiendo el acreedor la posibilidad de volver a entablar otra demanda ejecutiva.
+                Dependiendo del caso, tenemos también varias formas de hacer que no pierda su casa, permitir salvar una empresa con buen futuro, o evitar pagar una deuda que subió descontroladamente; con la ayuda de nuestras ejecutivas se verá la mejor solución.
+                </Paragraph>
+            </div>
+        </div>
+    </Container>
+</section>
+<section id="Mision" class="pb-10" style="scroll-margin-top: 100px;">
+  <Container>
+    
+    <div
+      class="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent max-w-xl mx-auto"
+    >
+      <div class="mx-auto text-center relative"> 
+        <h1
+          class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-heading-1"
+        >
+          Nuestra <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">Misión</span> 
+        </h1>
+        <Paragraph className={"pt-10 text-left"}>
+          Elimine sus deudas es un estudio jurídico que se forma con la idea de dar soluciones en el marco de la ley, a personas naturales y empresas con problemas de sobreendeudamiento. Este estudio jurídico fue fundado y diseñado con el objetivo de brindar atención y asesoría personalizada a través de diversos canales de comunicación virtual, con el fin de poder llegar a todo Chile.
+        Consideramos que todos tienen el derecho de volver a comenzar, ordenar sus finanzas y tener una buena calidad de vida. Es por eso que buscamos mejorar la situación económica de nuestros clientes, enfocándonos en una atención de calidad, profesional, personalizada, empática y confidencial. 
+
+        </Paragraph>
+      </div>
+    </div>
+  </Container>
+</section>
+<section id="Vision" class="pb-10" style="scroll-margin-top: 100px;">
+  <Container>
+    
+    <div
+      class="w-full relative py-5 md:py-7 px-6 md:px-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent max-w-xl mx-auto"
+    >
+    
+    
+      <div class="mx-auto text-center relative">
+        <h1
+          class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-heading-1"
+        >
+          Nuestra <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">Visión</span> 
+        </h1>
+        <Paragraph className={"pt-10 text-left"}>
+      Ser un estudio jurídico líder en la prestación de servicios profesionales establecidos en la Ley, con énfasis en la ley  20.720, todo ello  a través de diversas plataformas digitales cercanas, profesionales y que conecten con las personas en forma cómoda y oportuna. Ser un lugar que brinde el mejor servicio posible a cada uno de nuestros clientes, dando opciones reales y efectivas al alcance de todos. Buscamos que los resultados que obtengamos logren un cambio real en la vida de cada uno de nuestros clientes dejando huella en su vida financiera, superando situaciones adversas  tales como enfermedades, pérdida del trabajo, malas decisiones, estafas financieras, entre muchas otras.
+
+        </Paragraph>
+      </div>
+    </div>
+  </Container>
+ {/* Nuevo Botón Aquí */}
+        <div class="flex justify-end pt-4 md:pt-6">
+            <a 
+                href="/nosotros"  class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-primary-dark hover:shadow-xl"
+            >
+                Saber Más
+            </a>
+        </div>
+        {/* Fin del Nuevo Botón */}
+</section>

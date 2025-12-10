@@ -1,0 +1,421 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="Procesos" class="py-0 md:py-0">
+    <Container className="flex flex-col midmd:flex-row gap-5 lg:gap-5">
+        <div class="text-center flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col mx-auto">
+            <Title>
+                Procesos y Servicios
+            </Title>
+        </div>
+    </Container>
+
+    <Container className="flex justify-center gap-4 mt-4 mb-4 flex-wrap">
+        <a
+            href="#Datos-Liquidacion"
+            class="min-w-max text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 py-3 px-6 rounded-full inline-flex items-center justify-center font-bold shadow-lg"
+        >
+            <span class="relative z-[5]">
+                Ir a Liquidación
+            </span>
+        </a>
+
+        <a
+            href="#Datos-Renegociacion"
+            class="min-w-max text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 py-3 px-6 rounded-full inline-flex items-center justify-center font-bold shadow-lg"
+        >
+            <span class="relative z-[5]">
+                Ir a Renegociación
+            </span>
+        </a>
+    </Container>
+</section>
+
+---
+
+<div class="text-center text-4xl text-gray-500 dark:text-gray-400">
+    PROCESO DE LIQUIDACIÓN
+</div>
+<section id="Datos-Liquidacion" class="pt-0 pb-4 md:pt-0 md:pb-4">
+    <div
+        class="w-full relative pt-1 pb-5 md:pt-1 md:pb-7 px-3 md:px-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent max-w-xl mx-auto"
+    >
+        <div id="pasos-container-1" class="relative min-h-[250px] flex flex-col justify-center">
+
+            <div class="paso-item-1 text-center p-4" data-paso="1">
+                 <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/1.png" alt="Icono de Preparación Documental" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 1: Recolección de documentos </h3>
+                
+                   
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/file-text.png" alt="Icono de Reunión de Información" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">1</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                Si se encuentra en esta etapa, es porque aún no nos ha enviado toda la documentación que le hemos pedido. 
+                              <span class="font-semibold">Se le recuerda que es su responsabilidad aportar todo lo que se le pide, sin eso no podemos ayudarle.</span>.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paso-item-1 text-center p-4 hidden" data-paso="2">
+                <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/2.png" alt="Icono de Presentación Judicial" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 2: Ingreso de solicitud</h3>
+                
+                    
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/file-pen.png" alt="Icono de Cese de Juicios" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">2</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                En esta etapa la solicitud es ingresada al tribunal, se realiza la nominación del liquidador concursal ante la Superintendencia de Insolvencia, y finalmente el tribunal dicta la resolución de liquidación que marca el inicio de la quiebra.  <span class="font-semibold">Habitualmente demora entre treinta y sesenta días esta etapa. </span>
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paso-item-1 text-center p-4 hidden" data-paso="3">
+                <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/3.png" alt="Icono de Nombramiento de Liquidador" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 3: Resolución de liquidación</h3>
+                
+                    
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/check-check.png" alt="Icono de Gestión de Bienes" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">3</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                Si ya está en esta etapa, significa que su solicitud fue aceptada definitivamente, y sus deudas se extinguirán. 
+<br>Sus deudas se congelan y no se las pueden seguir cobrando. Si le hacen llamadas de cobranza, usted solo les debe indicar que se encuentra en proceso de quiebra, y que no pueden seguirle cobrando. 
+<br>Si aún le siguen descontando por planilla algún crédito, debe enviarnos su última liquidación donde aparezca el descuento para que podamos pedir que dejen de descontarle. 
+<br>En esta etapa, además, el liquidador designado busca todos los bienes que pueda tener, y para ello envía a través del tribunal, varios oficios a diversas instituciones, tales como Conservadores de bienes raíces para ver si tiene propiedades, Registro civil para ver si tiene herencias, Registro de vehículos motorizados para ver si tiene algún vehículo a su nombre, etc. 
+<br>Por último, le recordamos lo siguiente: 
+<br>No puede adquirir bienes y ponerlos a su nombre hasta que termine el proceso. 
+<br>No puede cambiar su información en la página del Servicio de Impuestos Internos (el liquidador cambia los datos de contacto) 
+<br>Se bloquearán todas las cuentas bancarias, por lo que debe utilizar solo cuentas digitales. 
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paso-item-1 text-center p-4 hidden" data-paso="4">
+                 <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/4.png" alt="Icono de Venta de Activos" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 4: Entrega de bienes</h3>
+                
+                   
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/package.png" alt="Icono de Pago de Deudas" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">4</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                               En esta etapa se entregan sus bienes para que se rematen, a fin de poder repartir el dinero entre los acreedores que participan del proceso. 
+<br>Si usted ofreció cosas, debe entregarlas a la persona que le indiquemos. 
+<br>Si ofreció dinero, le pediremos que deposite en la cuenta del liquidador el dinero ofrecido. 
+<br>Esta etapa podría durar más tiempo dependiendo de las cosas que se deba rematar. 
+<br>Además, en esta etapa se deben recibir las respuestas a los oficios enviados a las distintas instituciones, información necesaria que debe estar en el expediente antes de que el liquidador presente su cuenta final. 
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paso-item-1 text-center p-4 hidden" data-paso="5">
+                <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/5.png" alt="Icono de Distribución y Cierre" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 5: Presentación de cuenta final</h3>
+                
+                    
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/file-check.png" alt="Icono de Deuda Eliminada" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">5</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                En esta etapa, el liquidador presenta al tribunal una cuenta elaborada por su equipo contable, donde relata las gestiones realizadas dentro del proceso. Dicha cuenta si no es objetada, se entiende aprobada por los acreedores.  <span class="font-semibold">Solo se debe esperar que se dicte por el tribunal la resolución que pone término al proceso, lo que puede tardar de un par de semanas a un mes aproximadamente desde que se aprueba la cuenta final. </span>
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paso-item-1 text-center p-4 hidden" data-paso="6">
+                 <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/6.png" alt="Icono de Libre de Deudas" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 6: Dictación de resolución de término del procedimiento</h3>
+                
+                   
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/gavel.png" alt="Icono de Libre de Deudas" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">6</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                              Si se encuentra en esta etapa, significa que se dictó la resolución que pone término al procedimiento, extinguiendo en forma definitiva todos los saldos de las deudas que haya tenido con anterioridad a la dictación de la resolución de liquidación.  <span class="font-semibold">Se debe certificar por el ministro de fe del tribunal, que la resolución de término se encuentra firme, y una vez realizada la certificación, usted recupera la libre administración de sus bienes. Esto significa que ya puede poner bienes a su nombre, constituir una sociedad, cambiar su información tributaria en el servicio de impuestos internos, etc. </span>
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+            <button id="btn-anterior-1" 
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-150 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm">
+                &larr; Anterior
+            </button>
+            <span id="contador-pasos-1" class="text-lg font-semibold text-indigo-700 dark:text-indigo-400">1 de 6</span>
+            <button id="btn-siguiente-1" 
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-150 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm">
+                Siguiente &rarr;
+            </button>
+        </div>
+    </div>
+</section>
+
+---
+
+<div class="text-center text-4xl text-gray-500 dark:text-gray-400">
+    PROCESO DE RENEGOCIACIÓN
+</div>
+
+<section id="Datos-Renegociacion" class="pt-0 pb-4 md:pt-0 md:pb-4">
+    <div
+        class="w-full relative pt-1 pb-5 md:pt-1 md:pb-7 px-3 md:px-5 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent max-w-xl mx-auto"
+    >
+        <div id="pasos-container-2" class="relative min-h-[250px] flex flex-col justify-center">
+
+            <div class="paso-item-2 text-center p-4" data-paso="1">
+                <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/a.png" alt="Icono de Solicitud de Renegociación" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 1: Recolección de Documentos</h3>
+                
+                    
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/file-text.png" alt="Icono de Solicitud Formal" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">1</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                              Si se encuentra en esta etapa, es porque aún no nos ha enviado toda la documentación que le hemos pedido.
+
+                            Se le recuerda que es su responsabilidad aportar todo lo que se le pide, sin eso no podemos ayudarle. <span class="font-semibold">Si tiene alguna duda, contáctenos.</span>.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paso-item-2 text-center p-4 hidden" data-paso="2">
+                 <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/b.png" alt="Icono de Audiencia de Determinación" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 2: Ingreso de la Solicitud</h3>
+                
+                   
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/file-pen.png" alt="Icono de Deuda Fijada" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">2</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                               Esta etapa se inicia con la presentación de la solicitud ante la Superintendencia de Insolvencia y Re emprendimiento.
+
+                            La ley estipula un plazo de diez días hábiles para dar respuesta a la solicitud, sin embargo, en la práctica se está demorando entre 45 a 50 días hábiles (lunes a viernes).
+
+                            Mientras la Superintendencia da la respuesta, usted debe seguir pagando los créditos hipotecarios, créditos automotrices, créditos estudiantiles, si es que los tiene, y debe guardar los comprobantes de cualquier pago que realice.
+
+                            Se le recuerda que no puede negociar individualmente con alguno de los acreedores, ya que el procedimiento no podría continuar adelante.
+
+                            Tampoco puede deshacerse de sus bienes, o contraer más obligaciones que las que tiene.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paso-item-2 text-center p-4 hidden" data-paso="3">
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 3: Resolución de Admisibilidad</h3>
+                
+                    <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/c.png" alt="Icono de Audiencia de Renegociación" class="max-h-full max-w-full">
+                </div>
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/check-check.png" alt="Icono de Negociación" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">3</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                Si pasó a esta etapa, significa que su solicitud fue acogida y se renegociarán sus créditos con todos los acreedores.
+
+                            Nosotros le daremos la fecha de la primera audiencia, en la cual se determinarán los montos actualizados a la fecha de admisibilidad, de cada una de sus obligaciones. A esta audiencia no es necesario que comparezca, pero si así lo quiere, nos puede solicitar el enlace para estar presente y escuchar.
+
+                            En esta etapa no pueden iniciar demandas en su contra, ya que se encuentra con protección financiera concursal, si llegasen a notificarle alguna demanda, nos debe avisar lo antes posible para impedir que siga adelante.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paso-item-2 text-center p-4 hidden" data-paso="4">
+                 <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/d.png" alt="Icono de Acuerdo o Propuesta" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 4: Primera Audiencia ADP</h3>
+                
+                   
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/scan-eye.png" alt="Icono de Acuerdo Formalizado" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">4</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                Una vez celebrada la audiencia de determinación del pasivo, se fijará la segunda audiencia donde se someterá a votación la propuesta de pago para cada acreedor.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paso-item-2 text-center p-4 hidden" data-paso="5">
+                   <div class="w-75 flex items-center justify-center mx-auto mt-[-3rem]">
+                     <img src="/images/e.png" alt="Icono de Normalización Comercial" class="max-h-full max-w-full">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mt-4 mb-3">Paso 5: Segunda Audiencia</h3>
+                
+                 
+                <div class="flex items-start justify-center gap-4 mt-4 text-heading-2 font-medium">
+                    <div class="w-1/4 max-w-[100px] h-[100px] flex items-center justify-center flex-shrink-0">
+                        <img src="/images/users-round.png" alt="Icono de Normalización Comercial" class="max-h-full max-w-full">
+                    </div>
+                    <ul class="w-3/4 space-y-2 text-left">
+                        <li class="flex items-start">
+                            <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 mt-1 text-primary inline-flex justify-center items-center flex-shrink-0">5</span>
+                            <Paragraph className="text-gray-700 dark:text-gray-300">
+                                En esta audiencia, basta que el 51% del pasivo vote a favor para que se apruebe su renegociación, aunque los demás voten en contra.
+
+                        Nosotros le enviaremos las actas oficiales con el resultado de la audiencia, tres días hábiles después de celebrada la audiencia.
+
+                        En las actas, aparecerán los montos renegociados, el número de cuotas y el monto de aquellas con cada uno de sus acreedores.
+
+                        Una vez recibidas las actas, usted deberá acudir a firmar con los acreedores la documentación que formaliza el acuerdo (pagaré, contrato, etc), lo antes posible. <span class="font-semibold">Si alguno de sus acreedores tenía informada la deuda en Dicom, debe exigir que la dejen de informar, ya que las nuevas deudas reemplazan las deudas antiguas que tenía atrasadas.</span>.
+                            </Paragraph>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+            <button id="btn-anterior-2" 
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-150 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm">
+                &larr; Anterior
+            </button>
+            <span id="contador-pasos-2" class="text-lg font-semibold text-indigo-700 dark:text-indigo-400">1 de 5</span>
+            <button id="btn-siguiente-2" 
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-150 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm">
+                Siguiente &rarr;
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function setupProcesoNavegacion(procesoId, totalPasos) {
+        const sectionId = procesoId === 1 ? 'Datos-Liquidacion' : 'Datos-Renegociacion';
+        // Obtener la sección para el scroll
+        const sectionElement = document.getElementById(sectionId); 
+        
+        const pasosContainer = document.getElementById(`pasos-container-${procesoId}`);
+        const pasos = pasosContainer ? pasosContainer.querySelectorAll(`.paso-item-${procesoId}`) : [];
+        const btnAnterior = document.getElementById(`btn-anterior-${procesoId}`);
+        const btnSiguiente = document.getElementById(`btn-siguiente-${procesoId}`);
+        const contadorPasos = document.getElementById(`contador-pasos-${procesoId}`);
+
+        if (!pasosContainer || pasos.length === 0 || !btnAnterior || !btnSiguiente || !contadorPasos || !sectionElement) {
+            console.error(`Elementos no encontrados para el proceso ${procesoId}.`);
+            return;
+        }
+
+        let pasoActual = 1;
+
+        function actualizarVista() {
+            pasos.forEach(paso => paso.classList.add('hidden'));
+
+            const pasoAMostrar = document.querySelector(`.paso-item-${procesoId}[data-paso="${pasoActual}"]`);
+            if (pasoAMostrar) {
+                pasoAMostrar.classList.remove('hidden');
+            }
+
+            contadorPasos.textContent = `${pasoActual} de ${totalPasos}`;
+
+            btnAnterior.disabled = pasoActual === 1;
+            btnSiguiente.disabled = pasoActual === totalPasos;
+            
+            // ⭐ AÑADIDA LÓGICA DE SCROLL PARA MOVER LA VISTA ARRIBA AL CAMBIAR DE PASO ⭐
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        btnSiguiente.addEventListener('click', () => {
+            if (pasoActual < totalPasos) {
+                pasoActual++;
+                actualizarVista();
+            }
+        });
+
+        btnAnterior.addEventListener('click', () => {
+            if (pasoActual > 1) {
+                pasoActual--;
+                actualizarVista();
+            }
+        });
+
+        actualizarVista();
+    }
+
+    setupProcesoNavegacion(1, 6); // Proceso de Liquidación
+    setupProcesoNavegacion(2, 5); // Proceso de Renegociación
+
+</script>

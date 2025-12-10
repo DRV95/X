@@ -1,0 +1,51 @@
+---
+import Service from "../cards/Service.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { services } from "../../utils/data.ts";
+
+
+type ServicesProps = {
+    title: string;
+    description: string;
+    icon: string
+};
+
+
+---
+
+<section id="services">
+    <Container className="space-y-10 md:sapce-y-12">
+       
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Nuestros Servicios
+            </Title>
+            <Paragraph>
+                Elimina TODAS tus deudas legales y financieras de forma rápida, segura y definitiva, con la asesoría de expertos en insolvencia y reestructuración financiera.
+            </Paragraph>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {
+                    services.map((service: ServicesProps) => {
+                    return (
+                            <Service title={service.title} description={service.description} icon={service.icon}>
+                            </Service>
+                            );
+                    })
+            }
+        </div>
+
+        {/* Nuevo Botón Aquí */}
+        <div class="flex justify-end pt-4 md:pt-6">
+            <a 
+                href="/procesos"  class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-primary-dark hover:shadow-xl"
+            >
+                Saber Más
+            </a>
+        </div>
+        {/* Fin del Nuevo Botón */}
+
+    </Container>
+</section>
