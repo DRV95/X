@@ -18,27 +18,48 @@ import ByNumber from "./ByNumber.astro";
                 Eliminamos y renegociamos tus deudas bancarias y comerciales. Asesoría experta, confidencial y en todo Chile.
                 <br> <br><b>Escribe tu RUT y averigua en qué etapa te encuentras AQUÍ:</b>
             </Paragraph>
-            <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
-                <div class="flex sm:flex-row flex-col gap-5 w-full">
-                    <form action="#"  class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
-                      border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
-                        <span class="min-w-max pr-2 border-r border-box-border">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
-                                <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
-                            </svg>                                                            
-                        </span>
-                        <input type="email" name="" id="" placeholder="Ej: 30.585.265-7" class="w-full py-3 outline-none bg-transparent">
-                        <Button variant={"primary"} className={"min-w-max text-white"}>
-                            <span class="hidden sm:flex relative z-[5]">
-                                Enviar
-                            </span>
-                            <span class="flex sm:hidden relative z-[5]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                                </svg>                                    
-                            </span>
-                        </Button>
-                    </form>
+    <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
+    <div class="flex sm:flex-row flex-col gap-5 w-full">
+        <form id="rut-form" action="#" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+            border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary">
+            
+            <span class="min-w-max pr-2 border-r border-box-border">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                </svg>
+            </span>
+            
+            <input 
+                type="text" 
+                name="rut" 
+                id="rut-input" 
+                placeholder="Ej: 30.585.265-7" 
+                required 
+                class="w-full py-3 outline-none bg-transparent"
+            >
+            
+            <Button type="submit" variant={"primary"} className={"min-w-max text-white"}>
+                <span class="hidden sm:flex relative z-[5]">
+                    Enviar
+                </span>
+                <span class="flex sm:hidden relative z-[5]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                    </svg>
+                </span>
+            </Button>
+            
+        </form>
+    </div>
+</div>
+
+<div id="result-container" class="mt-4 p-4 rounded-lg hidden 
+    bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 
+    max-w-md mx-auto lg:mx-0 transition duration-300 ease-in-out">
+    
+    <p class="font-semibold">Resultado de la Consulta:</p>
+    <div id="result-data" class="mt-2 text-sm space-y-1"></div>
+</div>
                 </div>
             </div>
         </div>
@@ -50,3 +71,89 @@ import ByNumber from "./ByNumber.astro";
 
     <ByNumber/>
 </section>
+<script is:inline>
+    // ⚠️ ESTA ES LA URL ESTABLE, GENERADA A PARTIR DEL ID CORTO ⚠️
+    const GOOGLE_SHEETS_API_URL = "https://docs.google.com/spreadsheets/d/1PKsaDrILB4GHNEE2QcmIuiyJ5aTh2D8Adon_dZR1HkE/gviz/tq?tqx=out:json&gid=1465834992";
+
+    // ÍNDICES DE COLUMNAS (Contando desde 0: A=0, B=1, C=2, D=3)
+    const KEY_COLUMN_INDEX = 1;      // Columna B: RUT (Búsqueda)
+    const NAME_COLUMN_INDEX = 2;     // Columna C: Nombre
+    const PROC_COLUMN_INDEX = 3;     // Columna D: Procedimiento
+
+    document.getElementById('rut-form').addEventListener('submit', async function(e) {
+        e.preventDefault(); 
+
+        const rutInput = document.getElementById('rut-input');
+        const resultContainer = document.getElementById('result-container');
+        const resultData = document.getElementById('result-data');
+        const rut = rutInput.value.trim();
+
+        // Limpiar y preparar la UI
+        resultData.innerHTML = 'Buscando...';
+        resultContainer.classList.remove('hidden', 'bg-red-100', 'text-red-800');
+        resultContainer.classList.add('bg-green-100', 'text-green-800');
+        
+        if (!rut) {
+            resultData.innerHTML = 'Por favor, ingrese un RUT.';
+            resultContainer.classList.remove('bg-green-100', 'text-green-800');
+            resultContainer.classList.add('bg-red-100', 'text-red-800');
+            return;
+        }
+
+        try {
+            // 1. Obtener y parsear los datos de la Hoja de Cálculo
+            const response = await fetch(GOOGLE_SHEETS_API_URL);
+            const text = await response.text();
+            
+            // Proceso para extraer el JSON de la respuesta de Google Visualization API
+            const jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
+            const sheetData = JSON.parse(jsonText);
+            
+            // 2. Buscar el RUT en los datos descargados
+            let found = false;
+            let html = '';
+
+            if (!sheetData.table || !sheetData.table.rows) {
+                 throw new Error("Formato de datos de Google Sheet inválido.");
+            }
+            
+            const rows = sheetData.table.rows;
+
+            for (const row of rows) {
+                // Obtener el valor de la columna B (índice 1) y limpiar espacios
+                const rutValue = row.c[KEY_COLUMN_INDEX]?.v ? row.c[KEY_COLUMN_INDEX].v.toString().trim() : '';
+
+                if (rutValue === rut) {
+                    found = true;
+                    
+                    // Obtener los valores del Nombre (C, índice 2) y Procedimiento (D, índice 3)
+                    const nombre = row.c[NAME_COLUMN_INDEX]?.v || 'estimado(a) cliente';
+                    const procedimiento = row.c[PROC_COLUMN_INDEX]?.v || 'estado pendiente';
+
+                    // 3. Construir el mensaje solicitado
+                    html = `
+                        <p class="mb-2 font-semibold">¡Hola ${nombre}! Tu procedimiento se encuentra en el estado: <strong>${procedimiento}</strong>.</p>
+                        <p class="text-xs italic">Para entender mejor tu estado y conocer los pasos a seguir, visita nuestra sección: 
+                        <a href="#features" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>
+                    `;
+                    break; 
+                }
+            }
+
+            // 4. Mostrar resultados
+            if (found) {
+                resultData.innerHTML = html;
+            } else {
+                resultContainer.classList.remove('bg-green-100', 'text-green-800');
+                resultContainer.classList.add('bg-red-100', 'text-red-800');
+                resultData.innerHTML = `<p>El RUT ingresado no fue encontrado en nuestros registros.</p>`;
+            }
+
+        } catch (error) {
+            console.error('Error al conectar o parsear Google Sheets:', error);
+            resultContainer.classList.remove('bg-green-100', 'text-green-800');
+            resultContainer.classList.add('bg-red-100', 'text-red-800');
+            resultData.innerHTML = `<p>Error de conexión. Asegúrese de que la hoja esté publicada correctamente en la web.</p>`;
+        }
+    });
+</script>

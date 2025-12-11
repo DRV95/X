@@ -5,10 +5,10 @@ import Title from "../shared/Title.astro";
 
 ---
 
-<section id="features">
+<section id="features" class="relative"> 
     <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
       
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col midmd:mb-0">
             <Title>
                 Contamos con un Proceso Sencillo y Efectivo
             </Title>
@@ -20,7 +20,7 @@ import Title from "../shared/Title.astro";
             <Paragraph className="mt-2">
                 Recuerda los pasos clave de nuestro proceso y cómo te acompañaremos en cada etapa:
             </Paragraph>
-            <ul class="mt-8 space-y-4 text-heading-3 font-medium">
+            <ul class="mt-8 space-y-4 text-heading-3 font-medium mb-0">
                 <li>
                     <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> Pide una evaluación gratuita; revisaremos contigo la mejor opción.
                 </li>
@@ -35,25 +35,33 @@ import Title from "../shared/Title.astro";
                 </li>
             </ul>
         </div>
-
-    <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
-            
-            <div class="w-full h-80 sm:h-96 **midmd:h-[550px] lg:h-[650px]** relative">
-                
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+            
+            <div class="w-full h-80 sm:h-96 midmd:h-[550px] lg:h-[650px] relative">
+                
                 <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
-                
-                                <div class="flex flex-1 lg:w-full lg:h-full relative lg:max-w-none **mx-20** max-w-3xl"> 
-                  <img 
-    src="/images/dev-with-c.webp" 
-    alt="imagenproceso" 
-    width="850" 
-    height="859" 
-    class="lg:absolute **lg:w-4/5** lg:h-auto **top-1/4** mx-auto rounded-3xl object-cover lg:max-h-none max-h-96"
->
-            </div>
-        </div>
+                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
+                
+                <div class="flex flex-1 lg:w-full lg:h-full relative lg:max-w-none **mx-20** max-w-3xl"> 
+                    <img 
+                        src="/images/dev-with-c.webp" 
+                        alt="imagenproceso" 
+                        width="850" 
+                        height="859" 
+                        class="lg:absolute **lg:w-4/5** lg:h-auto **top-1/4** mx-auto rounded-3xl object-cover lg:max-h-none max-h-96"
+                    >
+                </div>
             </div>
         </div>
-    </Container>
+        </Container>
+
+    <div class="absolute top-[505px] md:top-[355px] lg:top-[480px] right-0 md:right-1/4 lg:right-1/14 z-10 w-full midmd:w-7/12 lg:w-1/2 flex justify-end">
+        <a 
+            href="/procesos" 
+            class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-primary-dark hover:shadow-xl -mr-12"
+        >
+            Saber Más
+        </a>
+    </div>
+
 </section>
