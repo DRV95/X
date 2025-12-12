@@ -3,37 +3,44 @@ import Info from "../cards/Info.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-
+// IMPORTACIONES ORIGINALES Y CORRECTAS RESTABLECIDAS
 ---
 
 <section id="about-us">
     <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
         
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto flex-col space-y-2 lg:-mt-44">
+            
             <div class="w-full h-80 sm:h-96 midmd:h-full relative">
                 <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
+                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
                 
                 <img src={"/images/dev-with-c-1.webp"} alt="banner image" 
                 width="1240" height="1385"
                 class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
             </div>
-        </div>
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-            <Title>
-                Un equipo comprometido con tu éxito financiero
-            </Title>
-            <Paragraph className="mt-8">
-               Iver Quiñones Soto, abogado (Universidad de Concepción), especializado en insolvencia. Servicio cercano, sólido y responsable, con un equipo de profesionales de gran nivel.
+            
+            <h1 class="text-xl/tight sm:text-2xl/tight md:text-3xl/tight lg:text-4xl/tight
+                font-bold text-heading-1">
+                UN <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">EQUIPO COMPROMETIDO</span> CON TU EXITO FINANCIERO.
+            </h1>
+            
+            <Paragraph className="mt-4">
+                Iver Quiñones Soto, abogado (Universidad de Concepción), especializado en insolvencia. Servicio cercano, sólido y responsable, con un equipo de profesionales de gran nivel.
             </Paragraph>
+        </div>
+
+        <div class="flex-1 midmd:w-7/12 lg:w-1/2">
             <div class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]">
+                
                 <Info description="Buscamos contribuir al desarrollo económico enfocándonos en una atención de calidad, profesional, personalizada, empática y confidencial para cada uno de nuestros clientes." title="Misión">
                     <span slot="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>                              
+                        </svg>              
                     </span>
                 </Info>
+                
                 <Info description="Buscamos que los resultados que obtengamos logren un cambio real en la vida de cada uno de nuestros clientes dejando huella en su vida financiera." title="Visión">
                     <span slot="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
@@ -45,14 +52,13 @@ import Title from "../shared/Title.astro";
             </div>
         </div>
     </Container>
-    {/* Nuevo Botón Aquí */}
-<div class="flex justify-end pt-7 md:pt-9 pr-6 md:pr-12">
-    <a 
-        href="/nosotros"  
-        class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-primary-dark hover:shadow-xl"
-    >
-        Saber Más
-    </a>
-</div>
-{/* Fin del Nuevo Botón */}
+    
+    <div class="flex justify-end pt-7 md:pt-9 pr-6 md:pr-12">
+        <a 
+            href="/nosotros" 
+            class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-primary-dark hover:shadow-xl"
+        >
+            Saber Más
+        </a>
+    </div>
 </section>

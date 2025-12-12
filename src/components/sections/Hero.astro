@@ -54,7 +54,7 @@ import ByNumber from "./ByNumber.astro";
 </div>
 
 <div id="result-container" class="mt-4 p-4 rounded-lg hidden 
-    bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 
+    bg-green-100 text-green-800 dark:bg-green-600 dark:text-green-300 
     max-w-md mx-auto lg:mx-0 transition duration-300 ease-in-out">
     
     <p class="font-semibold">Resultado de la Consulta:</p>
@@ -64,9 +64,10 @@ import ByNumber from "./ByNumber.astro";
             </div>
         </div>
 
-        <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-            <img src="/images/image1.webp" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
-        </div>
+ <div class="flex flex-1 lg:w-full lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+    <img src="/images/image1.webp" alt="Hero image" width="2750" height="2359" 
+    class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96 opacity-[.60] lg:right-0 lg:translate-x-13.5">
+</div>
     </Container>
 
     <ByNumber/>
@@ -134,7 +135,7 @@ import ByNumber from "./ByNumber.astro";
                     html = `
                         <p class="mb-2 font-semibold">¡Hola ${nombre}! Tu procedimiento se encuentra en el estado: <strong>${procedimiento}</strong>.</p>
                         <p class="text-xs italic">Para entender mejor tu estado y conocer los pasos a seguir, visita nuestra sección: 
-                        <a href="#features" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>
+                        <a href="/procesos" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>
                     `;
                     break; 
                 }
