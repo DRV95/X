@@ -7,154 +7,348 @@ import ByNumber from "./ByNumber.astro";
 ---
 
 <section class="relative pt-32 lg:pt-36">
-    <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
-        <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
-        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-            
-            <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
-              font-bold text-heading-1">
-                Asumimos <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">Tu Defensa</span> en todo Chile.          </h1>
-            <Paragraph className="mt-8">
-                Eliminamos y renegociamos tus deudas bancarias y comerciales. Asesoría experta, confidencial y en todo Chile.
-                <br> <br><b>Escribe tu RUT y averigua en qué etapa te encuentras AQUÍ:</b>
-            </Paragraph>
-    <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
-    <div class="flex sm:flex-row flex-col gap-5 w-full">
-        <form id="rut-form" action="#" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
-            border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary">
-            
-            <span class="min-w-max pr-2 border-r border-box-border">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
-                    <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
-                </svg>
-            </span>
-            
-            <input 
-                type="text" 
-                name="rut" 
-                id="rut-input" 
-                placeholder="Ej: 30.585.265-7" 
-                required 
-                class="w-full py-3 outline-none bg-transparent"
-            >
-            
-            <Button type="submit" variant={"primary"} className={"min-w-max text-white"}>
-                <span class="hidden sm:flex relative z-[5]">
-                    Enviar
-                </span>
-                <span class="flex sm:hidden relative z-[5]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                    </svg>
-                </span>
-            </Button>
-            
-        </form>
-    </div>
+    <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
+        <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
+        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+            
+            <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+              font-bold text-heading-1">
+                Asumimos <span class="text-transparent bg-clip-text bg-gradient-to-br from-yellow-800 from-20% via-amber-800 via-30% to-gray-700">Tu Defensa</span> en todo Chile.          </h1>
+            <Paragraph className="mt-8">
+                Eliminamos y renegociamos tus deudas bancarias y comerciales. Asesoría experta, confidencial y en todo Chile.
+                <br> <br><b>Escribe tu RUT y averigua en qué etapa te encuentras AQUÍ:</b>
+            </Paragraph>
+    <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
+    <div class="flex sm:flex-row flex-col gap-5 w-full">
+        <form id="rut-form" action="#" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+            border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary">
+            
+            <span class="min-w-max pr-2 border-r border-box-border">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                </svg>
+            </span>
+            
+            <input 
+                type="text" 
+                name="rut" 
+                id="rut-input" 
+                placeholder="Ej: 30.585.265-7" 
+                required 
+                class="w-full py-3 outline-none bg-transparent"
+            >
+            
+            <Button type="submit" variant={"primary"} className={"min-w-max text-white"}>
+                <span class="hidden sm:flex relative z-[5]">
+                    Enviar
+                </span>
+                <span class="flex sm:hidden relative z-[5]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                    </svg>
+                </span>
+            </Button>
+            
+        </form>
+    </div>
 </div>
 
 <div id="result-container" class="mt-4 p-4 rounded-lg hidden 
-    bg-green-100 text-green-800 dark:bg-green-600 dark:text-green-300 
-    max-w-md mx-auto lg:mx-0 transition duration-300 ease-in-out">
-    
-    <p class="font-semibold">Resultado de la Consulta:</p>
-    <div id="result-data" class="mt-2 text-sm space-y-1"></div>
+    bg-green-100 text-green-800 dark:bg-green-600 dark:text-green-300 
+    max-w-md mx-auto lg:mx-0 transition duration-300 ease-in-out">
+    
+    <p class="font-semibold">Resultado de la Consulta:</p>
+    <div id="result-data" class="mt-2 text-sm space-y-1"></div>
 </div>
-                </div>
-            </div>
-        </div>
+                </div>
+            </div>
+        </div>
 
- <div class="flex flex-1 lg:w-full lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-    <img src="/images/image1.webp" alt="Hero image" width="2750" height="2359" 
-    class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96 opacity-[.60] lg:right-0 lg:translate-x-13.5">
+ <div class="flex flex-1 lg:w-full lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+    <img src="/images/image1.webp" alt="Hero image" width="2750" height="2359" 
+    class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96 opacity-[.60] lg:right-0 lg:translate-x-13.5">
 </div>
-    </Container>
+    </Container>
 
-    <ByNumber/>
+    <ByNumber/>
 </section>
 <script is:inline>
-    // ⚠️ ESTA ES LA URL ESTABLE, GENERADA A PARTIR DEL ID CORTO ⚠️
-    const GOOGLE_SHEETS_API_URL = "https://docs.google.com/spreadsheets/d/1PKsaDrILB4GHNEE2QcmIuiyJ5aTh2D8Adon_dZR1HkE/gviz/tq?tqx=out:json&gid=1465834992";
+    // --- CONFIGURACIÓN DE HOJAS Y MAPEOS DE ETAPAS ---
 
-    // ÍNDICES DE COLUMNAS (Contando desde 0: A=0, B=1, C=2, D=3)
-    const KEY_COLUMN_INDEX = 1;      // Columna B: RUT (Búsqueda)
-    const NAME_COLUMN_INDEX = 2;     // Columna C: Nombre
-    const PROC_COLUMN_INDEX = 3;     // Columna D: Procedimiento
+    // Configuración de las planillas con las URLs de API de Visualización definitivas.
+    // Usamos el formato /gviz/tq que ha demostrado ser más estable contra bloqueos CORS.
+    const SHEET_CONFIGS = [
+        // --- RECOLECCION: Hoja de documentos iniciales ---
+        { 
+            type: "RECOLECCION",
+            apiUrl: "https://docs.google.com/spreadsheets/d/1snASqimqDH9RbPCnBKE9gnjKwob2O0QfLw_EvpP1LSk/gviz/tq?tqx=out:json&gid=0", 
+            KEY_COLUMN_INDEX: 1,      // Columna B: RUT (Índice 1)
+            NAME_COLUMN_INDEX: 2,     // Columna C: Nombre
+            PROC_COLUMN_INDEX: 3,     // Columna D: Proceso
+            DOC_COLUMNS: { // Columnas para verificar documentos
+                4: 'Cédula de Identidad',                // E (Índice 4)
+                8: '3 Liquidaciones de Sueldo',          // I (Índice 8)
+                9: 'Certificado de Matrimonio',          // J (Índice 9)
+                11: 'Mandato',                           // L (Índice 11)
+                12: 'Copia Inscripción',                 // M (Índice 12)
+                13: 'Declaración Jurada de Allegados',   // N (Índice 13)
+                14: 'Declaración y Anexos (Cuentas)',   // O (Índice 14)
+                15: 'Cartolas',                          // P (Índice 15)
+                19: 'Certificado de Hipotecas',           // T (Índice 19)
+            }
+        },
 
-    document.getElementById('rut-form').addEventListener('submit', async function(e) {
-        e.preventDefault(); 
+        // --- LIQUIDACION: Mapeo Estático (Progreso comienza en Columna D/Índice 3, según última imagen) ---
+        { 
+            type: "LIQUIDACION",
+            apiUrl: "https://docs.google.com/spreadsheets/d/1bsB_nbPgd88dpAZe8fdC6xoN_UR7dJPAI9RLr3Gnkcc/gviz/tq?tqx=out:json&gid=0", 
+            KEY_COLUMN_INDEX: 0,      // Columna A: RUT (Índice 0)
+            DATA_START_INDEX: 3,      // Columna D (Índice 3): Inicio del progreso (INGRESO)
+            STAGE_MAP: { 
+                3: { process: 'INGRESO', stage: 'ETAPA 1: Ingreso' },      // D
+                4: { process: 'LIQUIDADOR', stage: 'ETAPA 1: Liquidación' },    // E
+                5: { process: 'RESOLUCIÓN', stage: 'ETAPA 2: Resolución' },    // F
+                6: { process: 'ENTREGA DE BIENES', stage: 'ETAPA 3: Entrega de Bienes' },    // G
+                7: { process: 'RECEPCIÓN DE OFICIO', stage: 'ETAPA 3: Recepción de Oficio' },  // H
+                8: { process: 'CUENTA FINAL', stage: 'ETAPA 4: Cuenta Final' },    // I
+                9: { process: 'RESOLUCIÓN DE TÉRMINO', stage: 'ETAPA 5: Resolución de Término' },  // J
+                10: { process: 'SENTENCIA', stage: 'ETAPA 6: Sentencia' },    // K
+                11: { process: 'LIMPIEZA ANTECEDENTES', stage: 'LIMPIEZA ANTECEDENTES' },  // L
+            }
+        },
 
-        const rutInput = document.getElementById('rut-input');
-        const resultContainer = document.getElementById('result-container');
-        const resultData = document.getElementById('result-data');
-        const rut = rutInput.value.trim();
+        // --- RENEGOCIACION: Mapeo Estático (Progreso comienza en Columna C/Índice 2, según última imagen) ---
+        { 
+            type: "RENEGOCIACION",
+            apiUrl: "https://docs.google.com/spreadsheets/d/1FnbGRe_VnXQJkAbpoDw29hzPvckV4yfjLIGCE5Z2EzQ/gviz/tq?tqx=out:json&gid=0", 
+            KEY_COLUMN_INDEX: 0,      // Columna A: RUT (Índice 0)
+            DATA_START_INDEX: 2,      // Columna C (Índice 2): Inicio del progreso (INGRESO)
+            STAGE_MAP: { 
+                2: { process: 'INGRESO', stage: 'ETAPA 1: Ingreso' },      // C
+                3: { process: 'TR ROL', stage: 'ETAPA 1: Rol Asignado' },    // D
+                4: { process: 'RECTIFICACION', stage: 'ETAPA 1: Rectificación' }, // E
+                5: { process: 'ADMISIBILIDAD', stage: 'ETAPA 2: Admisibilidad' }, // F
+                6: { process: 'AUDIENCIA', stage: 'ETAPA 3: Audiencia' },     // G
+                7: { process: 'AUDIENCIA', stage: 'ETAPA 3: Resolución de Audiencia' }, // H
+                8: { process: 'ENVÍO DE ACTAS', stage: 'ETAPA 4: Envío de Actas' }, // I
+            }
+        },
+    ];
 
-        // Limpiar y preparar la UI
-        resultData.innerHTML = 'Buscando...';
-        resultContainer.classList.remove('hidden', 'bg-red-100', 'text-red-800');
-        resultContainer.classList.add('bg-green-100', 'text-green-800');
+    // --- FUNCIONES AUXILIARES ---
+
+    // Función de limpieza de RUT: Elimina puntos y guiones para estandarizar la búsqueda.
+    const cleanRut = (rut) => rut.replace(/[.-]/g, '').toUpperCase().trim();
+
+    // Función auxiliar para obtener el texto del encabezado (Solo usado en Recolección, ignorado en Mapeo Estático)
+    const getLabelValue = (cell) => {
+        if (!cell) return 'Etiqueta No Definida';
+        if (cell.f) return cell.f.toString();
+        if (cell.v !== null && cell.v !== undefined) return cell.v.toString();
+        return 'Etiqueta No Definida';
+    };
+
+    // --- FUNCIONES DE MANEJO DE RESULTADOS ESPECÍFICAS ---
+    
+    /**
+     * Lógica para la hoja de RECOLECCION: Verifica documentos faltantes.
+     */
+    const handleRecoleccionResult = (row, config, resultData) => {
+        const nombre = row.c[config.NAME_COLUMN_INDEX]?.v || 'estimado(a) cliente';
+        const proceso = row.c[config.PROC_COLUMN_INDEX]?.v || 'proceso general';
+        
+        const docsFaltantes = [];
+        
+        // Verifica cada columna de documento
+        for (const [colIndexStr, docName] of Object.entries(config.DOC_COLUMNS)) {
+            const colIndex = parseInt(colIndexStr);
+            const docValue = row.c[colIndex]?.v ? row.c[colIndex].v.toString().toLowerCase().trim() : '';
+
+            // Faltante si es vacío, nulo o la palabra 'no'.
+            if (docValue === '' || docValue === null || docValue === 'no') { 
+                docsFaltantes.push(docName);
+            }
+        }
+
+        let documentosHtml = '';
+        if (docsFaltantes.length > 0) {
+            documentosHtml = `<p class="mt-3 font-bold">Documentos requeridos para ingresar la solicitud:</p>
+                <ul class="list-disc list-inside ml-4 text-sm">${docsFaltantes.map(doc => `<li>${doc}</li>`).join('')}</ul>`;
+        } else {
+            documentosHtml = `<p class="mt-3 font-bold text-lg">¡Todos los documentos han sido recibidos! Su proceso está avanzando.</p>`;
+        }
+
+        // Mensaje: Hola (Columna C) estás en la etapa inicial de tu proceso de (Columna D) para ingresar la solicitud...
+        resultData.innerHTML = `
+            <p class="mb-2 font-semibold">¡Hola ${nombre}! Estás en la etapa inicial de tu proceso de <strong>${proceso}</strong>.
+            </p>
+            ${documentosHtml}
+            <p class="text-xs italic mt-4">Para más detalles sobre tu estado, visita nuestra sección: 
+            <a href="/procesos" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>`;
+        return true;
+    };
+
+
+    /**
+     * Lógica para las hojas LIQUIDACION y RENEGOCIACION (Mapeo Estático).
+     * 1. Encuentra el índice de la ÚLTIMA columna con un "check" (!NULL).
+     * 2. Mapea ese índice a las etiquetas de Etapa/Proceso predefinidas (STAGE_MAP).
+     */
+    const handleLiquidacionRenegociacionResult = (row, config, sheetData, resultData) => {
+        const nombre = 'estimado(a) cliente'; 
+        
+        let lastStage = 'En espera de documentos iniciales';
+        let processName = config.type; 
+        let lastCheckedIndex = -1;
+        
+        // 1. Encontrar la columna del ÚLTIMO CHECK (cualquier dato en la fila del RUT)
+        for (let i = config.DATA_START_INDEX; i < row.c.length; i++) {
+            const rowCell = row.c[i];
+            
+            // Si la celda en la fila del RUT tiene CUALQUIER valor (!NULL), actualizamos el índice.
+            if (rowCell?.v !== null && rowCell?.v !== undefined && rowCell?.v !== '') {
+                lastCheckedIndex = i;
+            }
+        }
         
-        if (!rut) {
-            resultData.innerHTML = 'Por favor, ingrese un RUT.';
-            resultContainer.classList.remove('bg-green-100', 'text-green-800');
-            resultContainer.classList.add('bg-red-100', 'text-red-800');
-            return;
-        }
+        // 2. Usar el índice encontrado para Mapear la Etapa/Proceso.
 
-        try {
-            // 1. Obtener y parsear los datos de la Hoja de Cálculo
-            const response = await fetch(GOOGLE_SHEETS_API_URL);
-            const text = await response.text();
+        if (lastCheckedIndex !== -1) {
             
-            // Proceso para extraer el JSON de la respuesta de Google Visualization API
-            const jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
-            const sheetData = JSON.parse(jsonText);
+            // Usamos el STAGE_MAP definido en la configuración
+            const mapEntry = config.STAGE_MAP[lastCheckedIndex];
             
-            // 2. Buscar el RUT en los datos descargados
-            let found = false;
-            let html = '';
-
-            if (!sheetData.table || !sheetData.table.rows) {
-                 throw new Error("Formato de datos de Google Sheet inválido.");
-            }
-            
-            const rows = sheetData.table.rows;
-
-            for (const row of rows) {
-                // Obtener el valor de la columna B (índice 1) y limpiar espacios
-                const rutValue = row.c[KEY_COLUMN_INDEX]?.v ? row.c[KEY_COLUMN_INDEX].v.toString().trim() : '';
-
-                if (rutValue === rut) {
-                    found = true;
-                    
-                    // Obtener los valores del Nombre (C, índice 2) y Procedimiento (D, índice 3)
-                    const nombre = row.c[NAME_COLUMN_INDEX]?.v || 'estimado(a) cliente';
-                    const procedimiento = row.c[PROC_COLUMN_INDEX]?.v || 'estado pendiente';
-
-                    // 3. Construir el mensaje solicitado
-                    html = `
-                        <p class="mb-2 font-semibold">¡Hola ${nombre}! Tu procedimiento se encuentra en el estado: <strong>${procedimiento}</strong>.</p>
-                        <p class="text-xs italic">Para entender mejor tu estado y conocer los pasos a seguir, visita nuestra sección: 
-                        <a href="/procesos" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>
-                    `;
-                    break; 
-                }
-            }
-
-            // 4. Mostrar resultados
-            if (found) {
-                resultData.innerHTML = html;
+            if (mapEntry) {
+                // Asignamos las etiquetas estáticas del mapa
+                lastStage = mapEntry.stage;
+                processName = mapEntry.process;
             } else {
-                resultContainer.classList.remove('bg-green-100', 'text-green-800');
-                resultContainer.classList.add('bg-red-100', 'text-red-800');
-                resultData.innerHTML = `<p>El RUT ingresado no fue encontrado en nuestros registros.</p>`;
+                // El RUT tiene avance en una columna no mapeada.
+                lastStage = `Último Check Avance (Columna ${lastCheckedIndex})`;
+                processName = config.type; 
             }
 
-        } catch (error) {
-            console.error('Error al conectar o parsear Google Sheets:', error);
-            resultContainer.classList.remove('bg-green-100', 'text-green-800');
-            resultContainer.classList.add('bg-red-100', 'text-red-800');
-            resultData.innerHTML = `<p>Error de conexión. Asegúrese de que la hoja esté publicada correctamente en la web.</p>`;
+        } else {
+            // El RUT existe en la hoja, pero no tiene checks de avance (está en estado inicial)
+            lastStage = 'En espera de documentos iniciales';
+            processName = config.type; 
         }
-    });
+
+        
+        // Mensaje final 
+        resultData.innerHTML = `
+            <p class="mb-2 font-semibold">¡Hola ${nombre}! Tu ${config.type} se encuentra en: <strong>${lastStage}</strong>.
+            <p class="text-xs italic mt-4">Para más detalles sobre tu estado, visita nuestra sección: 
+            <a href="/procesos" class="font-bold underline text-green-900 hover:text-green-700">Proceso</a></p>`; 
+        return true;
+    };
+    
+    // --- FUNCIÓN PRINCIPAL DE BÚSQUEDA MULTI-ARCHIVO ---
+
+    document.getElementById('rut-form').addEventListener('submit', async function(e) {
+        e.preventDefault(); 
+
+        const rutInput = document.getElementById('rut-input');
+        const resultContainer = document.getElementById('result-container');
+        const resultData = document.getElementById('result-data');
+        const rawRut = rutInput.value;
+        const searchRut = cleanRut(rawRut); 
+
+        // Limpiar y preparar la UI
+        resultData.innerHTML = 'Buscando su estado en los 3 procesos...';
+        resultContainer.classList.remove('hidden', 'bg-red-100', 'text-red-800');
+        resultContainer.classList.add('bg-green-100', 'text-green-800');
+        
+        if (!searchRut) {
+            resultData.innerHTML = 'Por favor, ingrese un RUT válido.';
+            resultContainer.classList.remove('bg-green-100', 'text-green-800');
+            resultContainer.classList.add('bg-red-100', 'text-red-800');
+            return;
+        }
+
+        let foundResult = false;
+        let connectionIssue = false;
+
+        // Iteramos sobre las 3 hojas de cálculo
+        for (const config of SHEET_CONFIGS) {
+            if (foundResult) break;
+            
+            try {
+                const response = await fetch(config.apiUrl);
+                
+                if (!response.ok) {
+                    throw new Error(`Error de red HTTP ${response.status} en ${config.type}.`);
+                }
+
+                const text = await response.text();
+                
+                // Proceso para extraer el JSON de la respuesta de Google Visualization API
+                const jsonStart = text.indexOf('{');
+                const jsonEnd = text.lastIndexOf('}') + 1;
+                
+                if (jsonStart === -1 || jsonEnd === 0) {
+                     throw new Error(`Fallo en la estructura JSON devuelta por ${config.type}.`);
+                }
+
+                const jsonText = text.substring(jsonStart, jsonEnd);
+                
+                let sheetData;
+                try {
+                    sheetData = JSON.parse(jsonText);
+                } catch (e) {
+                    throw new Error(`Fallo de parseo de datos en ${config.type}.`);
+                }
+                
+                // Si la tabla o las filas no existen, pasamos al siguiente archivo
+                if (!sheetData.table || !sheetData.table.rows || sheetData.table.rows.length === 0) {
+                    continue; 
+                }
+                
+                const rows = sheetData.table.rows;
+
+                // Buscar el RUT en las filas
+                for (const row of rows) {
+                    const rutValue = row.c[config.KEY_COLUMN_INDEX]?.v ? cleanRut(row.c[config.KEY_COLUMN_INDEX].v.toString()) : '';
+
+                    if (rutValue === searchRut) {
+                        
+                        let handlerFunction;
+                        if (config.type === "RECOLECCION") {
+                            // Recoleccion no necesita sheetData para la lógica del mensaje
+                            handlerFunction = (r, c, sd, rd) => handleRecoleccionResult(r, c, rd);
+                        } else if (config.type === "LIQUIDACION" || config.type === "RENEGOCIACION") {
+                            handlerFunction = handleLiquidacionRenegociacionResult;
+                        } 
+
+                        foundResult = handlerFunction(row, config, sheetData, resultData);
+                        break;
+                    }
+                }
+
+            } catch (error) {
+                console.error(`Error crítico en la hoja ${config.type}:`, error);
+                connectionIssue = true;
+                // Si la conexión falla en el primer intento, rompemos para no seguir intentando
+                break; 
+            }
+        }
+
+        // Mostrar resultados finales
+        resultContainer.classList.remove('bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+
+        if (foundResult) {
+             resultContainer.classList.add('bg-green-100', 'text-green-800');
+        } else {
+            resultContainer.classList.add('bg-red-100', 'text-red-800');
+            
+            if (connectionIssue) {
+                // Falló por error de red/cors/parseo en alguna hoja
+                resultData.innerHTML = `<p class="font-bold">❌ Error de Conexión/Datos:</p>
+                                        <p class="text-sm">No pudimos contactar la base de datos o hubo un problema de formato. Por favor, contacte a soporte.</p>`;
+            } else {
+                 // Las conexiones funcionaron, pero el RUT no existe en ninguno de los 3 archivos.
+                 resultData.innerHTML = `<p>El RUT ingresado no fue encontrado en nuestros registros de Recolección, Liquidación o Renegociación.</p>`;
+            }
+        }
+    });
 </script>
